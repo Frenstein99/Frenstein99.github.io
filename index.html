@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>EK Frênstein — Astrophysics & Cosmology</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>EK Frênstein — Astrophysics & Cosmology</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<header>
+    <img src="profile.jpg" alt="EK Frênstein" class="profile-pic">
+    <h1>EK Frênstein <span>(Eakramul KABIR)</span></h1>
+    <h2>Astrophysics & Cosmology (MSc)</h2>
+</header>
 
-    <!-- Header -->
-    <header>
-        <img src="profile.jpg" alt="EK Frênstein" class="profile-pic">
-        <h1>EK Frênstein <span>(Eakramul KABIR)</span></h1>
-        <h2>Astrophysics & Cosmology (MSc)</h2>
-    </header>
+<!-- Options -->
+<div class="tabs">
+    <button class="tab-btn" data-target="about">About Me</button>
+    <button class="tab-btn" data-target="education">Education</button>
+    <button class="tab-btn" data-target="contact">Contact</button>
+</div>
 
-    <!-- Sections -->
-    <section id="about" class="slide-section">
-        <h3>About Me</h3>
-        <p>Welcome! I am a PhD-seeking student with a strong background in Astrophysics and Cosmology. This website showcases my academic journey and professional work.</p>
-    </section>
+<!-- Tab Content -->
+<div class="tab-content" id="about">
+    <h3>About Me</h3>
+    <p>Welcome! I am a PhD-seeking student with a strong background in Astrophysics and Cosmology. This website showcases my academic journey and professional work.</p>
+</div>
 
-    <section id="education" class="slide-section">
-        <h3>Education</h3>
-        <ul>
-            <li>Master's in Astrophysics & Cosmology – Theory and Modelling - University of Padova, Italy</li>
-            <li>Master's Thesis on Dynamical Dark Energy (Kink Parametrization) at Paris Observatory-PSL, Supervisor – Pier-Stefano Corasaniti</li>
-            <li>Bachelor's in Fundamental Physics – Université de Lille, France</li>
-        </ul>
-    </section>
+<div class="tab-content" id="education">
+    <h3>Education</h3>
+    <ul>
+        <li>Master's in Astrophysics & Cosmology – Theory and Modelling - University of Padova, Italy</li>
+        <li>Master's Thesis on Dynamical Dark Energy (Kink Parametrization) at Paris Observatory-PSL, Supervisor – Pier-Stefano Corasaniti</li>
+        <li>Bachelor's in Fundamental Physics – Université de Lille, France</li>
+    </ul>
+</div>
 
-    <section id="contact" class="slide-section">
-        <h3>Contact</h3>
-        <p>Email: eakramulkabir999@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/frênstein-ek-7035412b5" target="_blank">frênstein-ek</a></p>
-        <p>GitHub: <a href="https://github.com/Frenstein99" target="_blank">Frenstein99</a></p>
-        <p>Share: <a href="https://www.facebook.com/sharer/sharer.php?u=https://Frenstein99.github.io" target="_blank">Facebook</a></p>
-    </section>
+<div class="tab-content" id="contact">
+    <h3>Contact</h3>
+    <p>Email: eakramulkabir999@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/frênstein-ek-7035412b5" target="_blank">frênstein-ek</a></p>
+    <p>GitHub: <a href="https://github.com/Frenstein99" target="_blank">Frenstein99</a></p>
+    <p>Share: <a href="https://www.facebook.com/sharer/sharer.php?u=https://Frenstein99.github.io" target="_blank">Facebook</a></p>
+</div>
 
-    <footer>
-        <p>&copy; 2026 EK Frênstein</p>
-    </footer>
+<footer>
+    <p>&copy; 2026 EK Frênstein</p>
+</footer>
 
-    <!-- Smooth scrolling -->
-    <script>
-        const links = document.querySelectorAll('nav ul li a');
-        for (const link of links) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth' });
-            });
-        }
-    </script>
+<!-- JavaScript for Tabs -->
+<script>
+const buttons = document.querySelectorAll('.tab-btn');
+const contents = document.querySelectorAll('.tab-content');
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        
+        // Hide all content
+        contents.forEach(c => c.style.display = 'none');
+        
+        // Show the target content
+        document.getElementById(target).style.display = 'block';
+    });
+});
+
+// Show first tab by default
+document.getElementById('about').style.display = 'block';
+</script>
 
 </body>
 </html>
-
 
