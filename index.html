@@ -6,41 +6,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
     <header>
-        <img src="profile.jpg" alt="EK Frênstein" style="width:200px; height:200px; border-radius:50%; display:block; margin:0 auto 15px auto; object-fit:cover; border:3px solid #007bff;">
+        <img src="profile.jpg" alt="EK Frênstein" class="profile-pic">
         <h1>EK Frênstein <span>(Eakramul KABIR)</span></h1>
         <h2>Astrophysics & Cosmology (MSc)</h2>
     </header>
 
-    <section id="about">
+    <!-- Sections -->
+    <section id="about" class="slide-section">
         <h3>About Me</h3>
-        <p>Welcome! I am a PhD seeking student with a strong background in Astrophysics and Cosmology. This website showcases my academic journey and professional work.</p>
+        <p>Welcome! I am a PhD-seeking student with a strong background in Astrophysics and Cosmology. This website showcases my academic journey and professional work.</p>
     </section>
 
-    <section id="education">
+    <section id="education" class="slide-section">
         <h3>Education</h3>
         <ul>
             <li>Master's in Astrophysics & Cosmology – Theory and Modelling - University of Padova, Italy</li>
-            <li>Master's Thesis on Dynamical Dark Energy (Kink Parametrization) at Paris Observatory-PSL, Thesis Supervisor – Pier-Stefano Corasaniti</li>
+            <li>Master's Thesis on Dynamical Dark Energy (Kink Parametrization) at Paris Observatory-PSL, Supervisor – Pier-Stefano Corasaniti</li>
             <li>Bachelor's in Fundamental Physics – Université de Lille, France</li>
         </ul>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="slide-section">
         <h3>Contact</h3>
         <p>Email: eakramulkabir999@gmail.com</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/frênstein-ek-7035412b5" target="_blank">frênstein-ek</a></p>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://Frenstein99.github.io" target="_blank">Facebook</a></p>
-        <p>GitHub: <a href="https://github.com/Frenstein99">Frenstein99</a></p>
+        <p>GitHub: <a href="https://github.com/Frenstein99" target="_blank">Frenstein99</a></p>
+        <p>Share: <a href="https://www.facebook.com/sharer/sharer.php?u=https://Frenstein99.github.io" target="_blank">Facebook</a></p>
     </section>
 
     <footer>
         <p>&copy; 2026 EK Frênstein</p>
     </footer>
+
+    <!-- Smooth scrolling -->
+    <script>
+        const links = document.querySelectorAll('nav ul li a');
+        for (const link of links) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+    </script>
+
 </body>
 </html>
-
-
-
 
 
