@@ -65,3 +65,13 @@ footer {
     color: #777;
     margin-top: 40px;
 }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+    color: #222;
+    background-color: #e6f0ff; /* light blue professional background */
+}
+
