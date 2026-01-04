@@ -76,14 +76,16 @@ body {
 }
 
 .profile-pic {
-    width: 120px;        /* small size */
-    height: 120px;       /* keep square for circle */
-    border-radius: 50%;  /* makes it circular */
+    width: 150px;         /* slightly bigger */
+    height: 150px;
+    border-radius: 50%;   /* circular */
     display: block;
     margin: 0 auto 15px auto;
-    border: 3px solid #007bff; /* optional */
-    object-fit: cover;   /* ensures the image fills the circle without stretching */
+    border: 3px solid #007bff; /* optional border */
+    object-fit: cover;    /* fills circle nicely */
 }
+
+
 
 
 
