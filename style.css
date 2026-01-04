@@ -101,11 +101,11 @@ footer {
     margin: 40px 0;
 }
 
-.education-list {
-    line-height: 1.50;  /* sets spacing between lines */
-    font-size: 1em;     /* optional, keep readable */
-    color: #222;        /* optional */
+.tab-content {
+    line-height: 1.50;       /* spacing */
+    text-align: justify;      /* justify both ends */
 }
+
 
 
 
