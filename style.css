@@ -79,7 +79,7 @@ header h2 {
 /* Justify all text inside tabs and add line spacing */
 .tab-content p,
 .tab-content li {
-    line-height: 1.25;     /* 1.25 spacing */
+    line-height: 1.50;     /* 1.50 spacing */
     text-align: justify;    /* justify both ends */
 }
 
@@ -108,6 +108,7 @@ footer {
     color: #777;
     margin: 40px 0;
 }
+
 
 
 
