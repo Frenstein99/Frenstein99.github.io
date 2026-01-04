@@ -74,16 +74,16 @@ body {
     color: #222;
     background-color: #e6f0ff; /* light blue professional background */
 }
-
 .profile-pic {
-    width: 150px;         /* slightly bigger */
-    height: 150px;
+    width: 200px;         /* bigger size */
+    height: 200px;
     border-radius: 50%;   /* circular */
     display: block;
     margin: 0 auto 15px auto;
     border: 3px solid #007bff; /* optional border */
     object-fit: cover;    /* fills circle nicely */
 }
+
 
 
 
