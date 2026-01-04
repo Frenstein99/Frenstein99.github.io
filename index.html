@@ -13,14 +13,14 @@
     <h2>Astrophysics & Cosmology (MSc)</h2>
 </header>
 
-<!-- Options -->
+<!-- Tabs buttons -->
 <div class="tabs">
-    <button class="tab-btn" data-target="about">About Me</button>
-    <button class="tab-btn" data-target="education">Education</button>
-    <button class="tab-btn" data-target="contact">Contact</button>
+    <button class="tab-btn" onclick="openTab('about')">About Me</button>
+    <button class="tab-btn" onclick="openTab('education')">Education</button>
+    <button class="tab-btn" onclick="openTab('contact')">Contact</button>
 </div>
 
-<!-- Tab Content -->
+<!-- Tab content -->
 <div class="tab-content" id="about">
     <h3>About Me</h3>
     <p>Welcome! I am a PhD-seeking student with a strong background in Astrophysics and Cosmology. This website showcases my academic journey and professional work.</p>
@@ -47,25 +47,19 @@
     <p>&copy; 2026 EK Frênstein</p>
 </footer>
 
-<!-- JavaScript for Tabs -->
+<!-- JS for tabs -->
 <script>
-const buttons = document.querySelectorAll('.tab-btn');
-const contents = document.querySelectorAll('.tab-content');
+function openTab(tabId) {
+    // Hide all tab content
+    const contents = document.querySelectorAll('.tab-content');
+    contents.forEach(c => c.style.display = 'none');
 
-buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const target = btn.getAttribute('data-target');
-        
-        // Hide all content
-        contents.forEach(c => c.style.display = 'none');
-        
-        // Show the target content
-        document.getElementById(target).style.display = 'block';
-    });
-});
+    // Show selected tab content
+    document.getElementById(tabId).style.display = 'block';
+}
 
-// Show first tab by default
-document.getElementById('about').style.display = 'block';
+// Show About Me by default
+openTab('about');
 </script>
 
 </body>
