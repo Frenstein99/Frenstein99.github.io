@@ -74,7 +74,12 @@ header h2 {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 20px;
+
+    /* Added for justified text and spacing */
+    line-height: 1.25;    /* 1.25 line spacing */
+    text-align: justify;   /* justify both ends */
 }
+
 
 /* Section headings */
 h3 {
@@ -105,6 +110,7 @@ footer {
     line-height: 1.50;       /* spacing */
     text-align: justify;      /* justify both ends */
 }
+
 
 
 
