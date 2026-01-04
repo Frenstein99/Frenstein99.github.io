@@ -75,3 +75,14 @@ body {
     background-color: #e6f0ff; /* light blue professional background */
 }
 
+.profile-pic {
+    width: 150px;       /* width of the profile picture */
+    height: 150px;      /* height (keep same as width for square/circle) */
+    border-radius: 50%; /* makes it circular */
+    display: block;
+    margin: 0 auto 15px auto; /* centers the picture and adds space below */
+    border: 3px solid #007bff; /* optional: blue border around it */
+    object-fit: cover;  /* ensures image fills circle without distortion */
+}
+
+
