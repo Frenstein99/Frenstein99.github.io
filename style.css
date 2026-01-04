@@ -66,7 +66,7 @@ header h2 {
     background-color: #0056b3;
 }
 
-/* Tab content */
+/* Tab content container (keeps styling) */
 .tab-content {
     display: none; /* hidden by default */
     background: #fff;
@@ -74,10 +74,13 @@ header h2 {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 20px;
+}
 
-    /* Added for justified text and spacing */
-    line-height: 1.50;    /* 1.50 line spacing */
-    text-align: justify;   /* justify both ends */
+/* Justify all text inside tabs and add line spacing */
+.tab-content p,
+.tab-content li {
+    line-height: 1.25;     /* 1.25 spacing */
+    text-align: justify;    /* justify both ends */
 }
 
 
@@ -106,10 +109,7 @@ footer {
     margin: 40px 0;
 }
 
-.tab-content {
-    line-height: 1.50;       /* spacing */
-    text-align: justify;      /* justify both ends */
-}
+
 
 
 
