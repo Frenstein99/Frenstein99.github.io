@@ -109,6 +109,12 @@ footer {
     margin: 40px 0;
 }
 
+/* Thesis References Styling */
+#thesis ol li {
+    color: #007bff; /* Blue color */
+    margin-bottom: 8px; /* Adds a little space between references */
+}
+
 
 
 
