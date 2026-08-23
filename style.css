@@ -6,8 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root{
-  --bg:        #0b0e17;
-  --bg-raised: #12172480;
+  --bg:        #12111f;
+  --bg-raised: #1a1f2f80;
   --line:      #2a3040;
   --text:      #f3f5fa;
   --text-dim:  #c3cade;
@@ -21,24 +21,39 @@
 
   --accent: var(--spec-g);
 
-  --serif: 'Fraunces', Georgia, serif;
-  --sans:  'Inter', -apple-system, Segoe UI, sans-serif;
+  --serif: 'Times New Roman', Times, 'Liberation Serif', serif;
+  --sans:  'Times New Roman', Times, 'Liberation Serif', serif;
   --mono:  'IBM Plex Mono', ui-monospace, monospace;
 
-  --maxw: 760px;
+  --maxw: 780px;
 }
 
 *{ box-sizing: border-box; }
 
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; font-size: 18px; }
 
 body{
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
-  line-height: 1.65;
+  font-size: 1.08rem;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+}
+
+/* soft nebula color wash — blue, violet & red pooling evenly across the background */
+body::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse 850px 700px at 8% 5%, #3a4fd688 0%, transparent 62%),
+    radial-gradient(ellipse 850px 700px at 92% 8%, #8a2f9e73 0%, transparent 60%),
+    radial-gradient(ellipse 900px 800px at 92% 92%, #c23a5580 0%, transparent 62%),
+    radial-gradient(ellipse 850px 750px at 8% 92%, #2f5adc73 0%, transparent 60%),
+    radial-gradient(ellipse 800px 700px at 50% 50%, #6a3a9e42 0%, transparent 65%);
 }
 
 /* faint starfield */
@@ -80,15 +95,15 @@ header.site .wrap{
 }
 .brand{
   font-family: var(--serif);
-  font-weight: 600;
-  font-size: 1.15rem;
+  font-weight: 700;
+  font-size: 1.3rem;
   text-decoration: none;
   letter-spacing: 0.01em;
 }
 .brand small{
   display: block;
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 400;
   color: var(--text-faint);
   letter-spacing: 0.08em;
@@ -97,7 +112,7 @@ header.site .wrap{
 }
 nav.crumb{
   font-family: var(--mono);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: var(--text-dim);
 }
 nav.crumb a{
@@ -121,14 +136,14 @@ footer.site{
 /* ---------- headings / type ---------- */
 h1{
   font-family: var(--serif);
-  font-weight: 600;
-  font-size: clamp(2rem, 5vw, 2.75rem);
-  line-height: 1.1;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5.5vw, 3.25rem);
+  line-height: 1.12;
   margin: 0 0 8px;
 }
 .eyebrow{
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
@@ -136,12 +151,12 @@ h1{
 }
 h2{
   font-family: var(--serif);
-  font-weight: 600;
-  font-size: 1.35rem;
-  margin: 40px 0 14px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 44px 0 16px;
   color: var(--text);
 }
-p{ color: var(--text-dim); margin: 0 0 16px; }
+p{ color: var(--text-dim); margin: 0 0 18px; font-size: 1.08rem; }
 strong{ color: var(--text); }
 
 ul.plain{ margin: 0 0 16px; padding-left: 1.1em; color: var(--text-dim); }
@@ -183,13 +198,13 @@ ul.plain li::marker{ color: var(--accent); }
 }
 .index-list .name{
   font-family: var(--serif);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--text);
   flex: 1;
 }
 .index-list .desc{
   font-family: var(--sans);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--text-dim);
   display: none;
 }
@@ -266,21 +281,54 @@ ul.plain li::marker{ color: var(--accent); }
   .hero-banner.tall{ height: 440px; }
 }
 
-/* ---------- data table (grades, coursework) ---------- */
+/* ---------- data table (grades, coursework, thesis meta) ---------- */
 table.data{
   width: 100%;
   border-collapse: collapse;
-  margin: 12px 0 28px;
-  font-family: var(--mono);
-  font-size: 0.82rem;
+  margin: 16px 0 32px;
+}
+table.data tr{
+  border-bottom: 1px solid var(--line);
+  transition: background .15s ease;
+}
+table.data tr:hover{
+  background: linear-gradient(90deg, #ffffff0a, transparent);
 }
 table.data td{
-  padding: 9px 0;
-  border-bottom: 1px solid var(--line);
-  color: var(--text);
+  padding: 16px 4px;
+  vertical-align: top;
 }
-table.data td:first-child{ color: var(--text-faint); width: 55%; }
-table.data td:last-child{ color: var(--text); text-align: right; }
+table.data td:first-child{
+  width: 34%;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  padding-right: 20px;
+  position: relative;
+}
+table.data td:first-child::before{
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 10px;
+  vertical-align: middle;
+  box-shadow: 0 0 8px var(--accent);
+}
+table.data td:last-child{
+  font-family: var(--sans);
+  font-size: 1.08rem;
+  color: var(--text);
+  text-align: left;
+  line-height: 1.55;
+}
+@media (min-width: 560px){
+  table.data td{ padding: 18px 4px; }
+}
 
 /* ---------- footer nav between sections ---------- */
 .pagenav{
