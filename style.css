@@ -387,3 +387,22 @@ table.data td:last-child{
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
+
+/* ---------- scroll reveal animation ---------- */
+.reveal{
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s cubic-bezier(.16,.8,.3,1), transform .7s cubic-bezier(.16,.8,.3,1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero-banner .reveal{
+  transform: translateY(14px);
+  transition-duration: .8s;
+}
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity: 1; transform: none; transition: none; }
+}
